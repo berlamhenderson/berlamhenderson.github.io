@@ -1,21 +1,6 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-.post{
-    img {
-        -webkit-filter: sepia(.2) brightness(1.15) saturate(1.4);
-        filter: sepia(.2) brightness(1.15) saturate(1.4)
-    }
-}
-
-.post {
-    img::before {
-        background: rgba(125, 105, 24, .1);
-        content: "";
-        mix-blend-mode: multiply
-    }
-}
-
 /* 
 ⚠️
 colors could be added to tailwind.js config file 

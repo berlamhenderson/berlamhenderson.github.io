@@ -1,0 +1,57 @@
+<!-- status elements -->
+<div class="page-load-status">
+  <div class="max-w-sm mx-auto overflow-hidden object-center my-6">
+    <div class="lds-ripple center-div">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="max-w-sm mx-auto overflow-hidden object-center my-6">
+      <p class="infinite-scroll-last">End of content</p>
+      <p class="infinite-scroll-error">No more pages to load</p>
+    </div>
+  </div>
+
+</div>
+<!-- end status elements -->
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+  {% if paginator.page == 2 %}
+  <a class='prev' href="{{ site.baseurl }}/">&laquo; Prev</a>
+  {% else %}
+  <a class='prev' href="{{ site.baseurl }}/page{{ paginator.previous_page }}/">&laquo; Prev</a>
+  {% endif %}
+  {% else %}
+  <span class='prev'>&laquo; Prev</span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class='next' href="{{ site.baseurl }}/page{{ paginator.next_page }}/">Next &raquo;</a>
+  {% else %}
+  <span class='next'>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+</div>
+
+<script type="text/javascript">
+  //-------------------------------------//
+  // init Infinte Scroll
+  // source : https://infinite-scroll.com/options.html#hidenav
+  //
+
+  var infScroll = new InfiniteScroll('.container', {
+    path: '.next',
+    append: '.post',
+    hideNav: '.pagination',
+    status: '.page-load-status',
+    checkLastPage: false,
+    checkLastPage: '.next',
+    hideNav: '.pagination',
+    history: 'push',
+    historyTitle: true,
+    debug: false,
+    prefill: false,
+  });
+</script>

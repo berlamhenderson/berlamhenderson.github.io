@@ -1,0 +1,161 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+.post{
+    img {
+        -webkit-filter: sepia(.2) brightness(1.15) saturate(1.4);
+        filter: sepia(.2) brightness(1.15) saturate(1.4)
+    }
+}
+
+.post {
+    img::before {
+        background: rgba(125, 105, 24, .1);
+        content: "";
+        mix-blend-mode: multiply
+    }
+}
+
+/* 
+⚠️
+colors could be added to tailwind.js config file 
+*/
+
+.bg-brand {
+    background: rgb(255, 187, 0);
+}
+
+.bg-dark {
+    background: rgba(0, 0, 0, .08);
+}
+
+.hover\:bg-dark:hover {
+    background: rgba(0, 0, 0, .08);
+}
+
+@media (min-width: 768px) {
+
+    .md\:bg-dark {
+        background: rgba(0, 0, 0, .08);
+    }
+
+    /* some interactivity */
+    .search {
+        transition: all .3s;
+    }
+
+    .search:hover {
+        background: #ffffff;
+        color: #000;
+        border-radius: 100px;
+    }
+
+    .search__clean {
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    .search:hover .search__clean {
+        opacity: 1;
+    }
+
+}
+
+/* some resets */
+:focus {
+    outline: none !important;
+    border: none;
+}
+
+/* test */
+
+a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .hero {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tt_tailwind_bg.jpg');
+    background-size: cover;
+  }
+  
+  .h-112 {
+    height: 28rem;
+  }
+  
+  .lg\:-mt-24 {
+    margin-top: -6rem;
+  }
+  
+  .h-20 {
+    height: 5rem;
+  }
+  
+  .w-20 {
+    width: 5rem;
+  }
+  
+  .w-1\/8 {
+    width: 12.5%;
+  }
+  
+  .w-7\/8 {
+    width: 87.5%;
+  }
+
+  /* 
+  loadin 
+  https://loading.io/css/
+  */
+  .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #eb5286;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+  }
+}
+
+.center-div
+{
+    margin: 0 auto;
+}
+
+/* https://infinite-scroll.com/options.html#elementscroll
+
+    demo : https://codepen.io/desandro/pen/WOpjMM
+    
+    */ 
+.page-load-status {
+    display: none; /* hidden by default */
+    padding-top: 20px;
+    text-align: center;
+    color: #777;
+  }

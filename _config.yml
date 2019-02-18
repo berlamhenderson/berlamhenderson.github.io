@@ -1,0 +1,22 @@
+#baseurl: /jekyll-infinite
+paginate: 3
+plugins: [jekyll-paginate] 
+title: wikipajak.org
+im-logo: tiger.png
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      author:  "diskusipajak"
+      author-avatar: "/assets/png/-tiger.jpg"
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+
+google-site-verification: halo

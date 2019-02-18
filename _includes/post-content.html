@@ -1,0 +1,27 @@
+<div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-6 bg-grey-lightest post">
+        {% if post.image %}
+        <img class="w-full" src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+    <div class="px-6 py-4">
+        <div class="font-bold text-md mb-2">{{ post.title }}</div>
+        <div class="text-grey-darker text-sm">
+            {{ post.content }}
+        </div>
+    </div>
+    <div class="px-6 py-4">
+        {% for tag in post.tags %}
+        <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"><a
+                href="/tags#{{ tag }}" class="no-underline">#{{ tag }}</a></span>
+        {% endfor %}
+    </div>
+
+    <div class="flex items-center px-6 py-4">
+        <img class="w-10 h-10 rounded-full mr-4" src="{{ site.url }}//{{ post.author-avatar }}" alt="{{ post.author }}">
+        <div class="text-sm">
+            <p class="text-black leading-none">{{ post.author }}</p>
+            {% if post.date %}
+            <p class="text-grey-dark"></p>{{ post.date | date: "%B %-d, %Y" }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>

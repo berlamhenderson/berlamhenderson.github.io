@@ -1,0 +1,12 @@
+---
+layout: default
+title: Homepage
+---
+<div class="font-sans">
+  {% for post in site.posts %}
+  <div class="bg-white max-w-md mx-auto my-4 border border-grey-light shadow">
+    {% include post-content.html %}
+  </div>{% endfor %}
+</div>
+
+<script src="//unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>

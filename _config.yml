@@ -1,5 +1,5 @@
 #baseurl: /jekyll-infinite
-paginate: 3
+paginate: 10
 plugins: [jekyll-paginate] 
 title: wikipajak.org
 im-logo: tiger.png
@@ -12,11 +12,12 @@ defaults:
     values:
       layout: "post"
       author:  "diskusipajak"
-      author-avatar: "/assets/png/-tiger.jpg"
+      author-avatar: "/assets/png/logo.jpg"
 
 sass:
     load_paths:
         - _sass
-        - node_modules
 
 google-site-verification: halo
+
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", ".sass-cache"]

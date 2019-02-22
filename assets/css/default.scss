@@ -144,3 +144,18 @@ a {
     text-align: center;
     color: #777;
   }
+
+  .post {
+    h3 {
+      @apply text-4xl text-orange mt-10 mb-2;
+    }
+    h4 {
+      @apply text-3xl text-orange mt-10 mb-2;
+    }
+    p {
+      @apply leading-loose text-xl font-thin;
+    }
+    ul, ol {
+      @apply text-xl my-4 leading-loose font-thin;
+    }
+  }

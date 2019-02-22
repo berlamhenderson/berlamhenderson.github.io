@@ -18,6 +18,7 @@ sass:
     load_paths:
         - _sass
 
-google-site-verification: halo
-
 exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", ".sass-cache"]
+
+google_analytics: UA-111280620-2
+google_adsense: ca-pub-2676120456797792

@@ -1,10 +1,10 @@
-<div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-6 bg-grey-lightest post">
+<div class="max-w-sm mx-auto rounded overflow-hidden shadow my-6 bg-grey-lightest post">
         {% if post.image %}
         <img class="w-full" src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}">
         {% endif %}
     <div class="px-6 py-4">
         <div class="font-bold text-md mb-2">{{ post.title }}</div>
-        <div class="text-grey-darker text-sm">
+        <div class="text-black text-sm">
             {{ post.content }}
         </div>
     </div>

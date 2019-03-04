@@ -1,4 +1,4 @@
-<div class="max-w-sm mx-auto rounded overflow-hidden shadow my-6 bg-grey-lightest post">
+<div class="max-w-md mx-auto rounded overflow-hidden shadow my-6 bg-grey-lightest post">
         {% if post.image %}
         <img class="w-full" src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}">
         {% endif %}
@@ -10,7 +10,7 @@
     </div>
     <div class="px-6 py-4">
         {% for tag in post.tags %}
-        <span class="inline-block bg-grey-light rounded-full px-3 py-1 text-xs font-semibold text-grey-darker mr-2"><a href="/tags#{{ tag }}" class="no-underline">#{{ tag }}</a></span>
+        <span class="inline-block bg-grey-light rounded-full px-3 py-1 text-xs font-semibold text-grey-darker mr-2">#{{ tag }}<a href="/tags#{{ tag }}" class="no-underline"></a></span>
         {% endfor %}
     </div>
 
